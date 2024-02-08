@@ -1,9 +1,9 @@
 /* Application styles */
 /*
  * Colors:
- *  
+ *
  */
- 
+
 @import url("syr-font-families.css");
 
 /* A */
@@ -14,12 +14,12 @@
 .api-param {width:20%}
 .api-desc {width:55%}
 .api-method {width:10%}
-.anchor { 
+.anchor {
     display: block;
-    position: relative; 
+    position: relative;
     top:-25px !important;
-    visibility: hidden; 
-    }   
+    visibility: hidden;
+    }
 .anchor:before {
   content:"";
   float: left;
@@ -40,7 +40,7 @@
     border-bottom:4px solid #456889;
 }
 .banner-container {display:inline-block; line-height:2.5em;}
-.banner-text {color: #888; display:inline-block; letter-spacing: -1px; font:1.35em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.banner-text {color: #f1f1f1; display:inline-block; letter-spacing: -1px; font:1em Lato, "Georgia", Garamond, Times, serif;}
 .banner-icon img{height:50px; overflow:hidden; padding-left: 1em; vertical-align: middle; margin:-.25em .5em 0 .5em; padding:0;}
 
 .bg-light {
@@ -52,16 +52,16 @@
 .bg-dark {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px); 
+  backdrop-filter: saturate(180%) blur(20px);
   color:white;
 }
 
 .bg-grey {
   background-color: rgba(119,119,119, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px); 
+  backdrop-filter: saturate(180%) blur(20px);
   color:white;
-} 
+}
 
 .bg-blue {
   background-color: rgb(69,104,137, .85);
@@ -70,7 +70,7 @@
   color:white;
 }
 
-body {font-family: arial, sans-serif; background-color:white;}
+body {font-family: Georgia, serif; background-color:white;}
 
 .btn-rounded {
   border-radius: 25px;
@@ -80,7 +80,7 @@ body {font-family: arial, sans-serif; background-color:white;}
   background-color: rgba(255,255,255, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
-  border: 1px solid #777;  
+  border: 1px solid #777;
   color:#3596e0;
 }
 
@@ -94,7 +94,7 @@ body {font-family: arial, sans-serif; background-color:white;}
       color: #ddd;
       background-color: rgba(143,143,143, .10);
     }
-    
+
 .btn-light::-moz-focus-inner{
       border: none;
     }
@@ -104,7 +104,7 @@ body {font-family: arial, sans-serif; background-color:white;}
       box-shadow: 0 0 0 3px rgba(87, 145, 170, 0.5),
         0 0 0 1.5px rgba(87, 145, 170, 0.5);
     }
-    
+
 /* browse menus*/
 .browse-alpha {border-bottom:1px solid #ccc; padding:.5em 1em; margin:1em 0; text-align: justify;}
 .browse-alpha li + li {padding-left: .75em;}
@@ -155,11 +155,11 @@ footer .poweredby img { width: 75px; }
     padding: 1em;
     margin: 1em;
     font-size: large;
-    
+
 }
 .footnote-icon {
-    padding-left:.5em; 
-    font-size:12px; 
+    padding-left:.5em;
+    font-size:12px;
     line-height: 18px;
     vertical-align: middle;
     }
@@ -170,12 +170,12 @@ footer .poweredby img { width: 75px; }
     margin-top: -0.25em;
     vertical-align: middle;
     }
-    
+
 /* facets */
 .facet-label {
-    margin-left:.5em; 
-    display:block; 
-    text-align:left; 
+    margin-left:.5em;
+    display:block;
+    text-align:left;
     white-space: normal;
     }
 .facet-label.remove {background-color:#eee; color:#666; font-weight:normal; margin:.25em; display:inline-block;}
@@ -187,12 +187,14 @@ footer .poweredby img { width: 75px; }
 
 /* H */
 .hint {font-size:small; font-style:italic; font-color:grey;}
+
+.ban-logo{width:40px!important;}
 .home-page-text {
     color:white; font-size:1.75em; margin-top:2em;
     font-weight:200;
     background: rgb(34,34,34); /* for IE */
     background: rgba(34,34,34,0.55);
-    color: white; 
+    color: white;
     padding: 2.75em 2em 2em;
     display:block;
     min-height:375px;
@@ -232,7 +234,7 @@ img{ margin:0px }
     font-weight:200;
     background: rgb(34,34,34); /* for IE */
     background: rgba(34,34,34,0.55);
-    color: white; 
+    color: white;
     display: inline;
     padding: 0.5em;
     -webkit-box-decoration-break: clone;
@@ -253,21 +255,21 @@ img{ margin:0px }
 /* SyrCOMAdiabene SyrCOMTalada SyrCOMAntioch */
 :lang(syr),:lang(syc) {
   font-family: "SyrCOMTalada", "Estrangela Talada", Verdana, Arial, Helvetica, sans-serif;
-  font-size:1.25em; 
+  font-size:1.25em;
   line-height:1em;
-  
+
 }
 
 :lang(syr-Syrj), :lang(syc-Syrj) {
   font-family: "SyrCOMAntioch", "Serto Antioch", Verdana, Arial, Helvetica, sans-serif;
-  font-size:1.25em; 
+  font-size:1.25em;
   line-height:1em;
- 
+
 }
 
 :lang(syr-Syre), :lang(syc-Syre) {
  font-family: "SyrCOMAdiabene", "East Syriac Adiabene", Verdana, Arial, Helvetica, sans-serif;
- font-size:1.25em; 
+ font-size:1.25em;
  line-height:1em;
 
 }
@@ -275,7 +277,7 @@ img{ margin:0px }
 
 :lang(ar) {
  font-family: arial, sans-serif;
- font-size:1.25em; 
+ font-size:1.25em;
  line-height:1em;
 }
 
@@ -290,19 +292,19 @@ img{ margin:0px }
 
 /* N */
 /* Navbar styles*/
-.navbar {padding:0 2em; border-bottom:4px solid #456889 !important;}
+.navbar {padding:0 2em; border-bottom:4px solid #456889 !important;background-color:ivory;}
 .navbar .dropdown {margin-top:.65em; margin-left: 1.5em;}
 .navbar {border-bottom:4px solid #456889 !important;}
 .navbar-inner {border-bottom:.5em solid #456889 !important;}
 .navbar-inner .container{height: 45px !important; padding-top:.5em; margin-left:.5em;}
 .navbar-inner {border-bottom:.5em solid #456889 !important;}
 .navbar-inner .container{height: 45px !important; padding-top:.5em; margin-left:.5em;}
-.navbar-brand {margin-top:-.75em; padding-left:0; margin-left:0; margin-right:-2em;}
-.navbar-brand img {padding:0; margin:0; }
+.navbar-brand {margin-top:-2em; padding-left:0; margin-left:0; margin-right:-2em;}
+.navbar-brand img {padding:0; margin:25px 0; }
 .navbar .brand {margin-top:-.75em; margin-left:40px;padding-left:0;}
 .navbar .brand img {margin-left:1.5em;padding-left:0;}
 .navbar-inner .nav > li > a:hover, .advanced-search > a:hover {
-        border-bottom: 4px solid #DDEAF1 !important;  
+        border-bottom: 4px solid #000 !important;
 }
 .navbar-inner > .container > .nav > li.selected {border-bottom: 4px solid #E69849 !important; }
 .navbar.advanced-search > a {color:#999; text-decoration:none;}
@@ -357,7 +359,7 @@ img{ margin:0px }
     font-weight:200;
     background: rgb(34,34,34); /* for IE */
     background: rgba(34,34,34,0.65);
-    color: white; 
+    color: white;
     display: inline;
     padding: 1.5em;
     -webkit-box-decoration-break: clone;
@@ -414,7 +416,7 @@ pre {
 #search-wrapper {
   margin-top: .75em;
   margin-left:.5em;
-  margin-right:.5em; 
+  margin-right:.5em;
   padding:0;
   display:flex;
   flex-direction:row;
@@ -485,7 +487,7 @@ pre {
     overflow:visible;
     text-align:center;
     }
-.top-padding{padding-top:3em;}  
+.top-padding{padding-top:3em;}
 /* TEI styles */
 .tei-desc {display:block;margin:1em;}
 /* .tei-event {display:block;} */
@@ -499,7 +501,7 @@ pre {
 }
 .tei-footnote-tgt {
     margin-left:-1.5em;
-    padding-right:.5em;    
+    padding-right:.5em;
 }
 .tei-event p {display:inline-block;}
 .tei-note {margin: 1em;}
@@ -524,7 +526,7 @@ pre {
     float:left;
     margin-left:3em;
     }
-.caret {float:left; margin-left:.5em; margin-top:.5em;} 
+.caret {float:left; margin-left:.5em; margin-top:.5em;}
 
 /* Hide imported down arrow from github wiki menu */
 .js-wiki-sidebar-toc-toggle-chevron-button {display:none;}
@@ -546,3 +548,40 @@ pre {
     from { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(360deg); }
 }
+
+/* MSS styles */
+.summary {font-size:smaller; margin-left:8px;}
+.header {margin: 1em 0;}
+.msItem-notes {
+/*    border-left:2px solid #ccc; */
+/*    padding: 0 1em; margin-top:.5em;*/
+    margin:.5em 0;
+    }
+.msItemChild {margin-left:.5em;}
+.tei-msItem {
+    display:block;
+    /* top/bottom corners */
+    background-image: linear-gradient(#99b4ce, #99b4ce),linear-gradient(#99b4ce, #99b4ce);
+    background-repeat: no-repeat;
+    background-size: 8px 2px;
+    background-position: top left, bottom left;
+    /* left border */
+    border-left: solid #99b4ce;
+    text-align: justify;
+    border-width: 0 2px;
+    vertical-align: top;
+    padding: 5px 10px;
+    margin: 8px;
+/* border-left:2px solid #99b4ce; padding: 0 1em; margin-left:.5em; margin-top:.5em;*/
+ }
+ .shelfmark {
+    font-size: 1.55em;
+    margin: 0.25em 0 0.25em 0;
+    color: #456889;
+    font-weight: 500;
+ }
+
+
+
+
+
