@@ -8,6 +8,7 @@ rm -rf autodeploy
 mkdir autodeploy
 
 echo "Running app build ..."
+npm install
 ant
 echo "Ran app build successfully"
 
