@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" data-template="app:get-work" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" data-template="app:get-work">
     <head>
         <title data-template="app:record-title">App Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta data-template="config:app-meta"/>
+        <meta name="DC.type" property="dc.type" content="Text"/>
+        <meta name="DC.isPartOf" property="dc.ispartof" content="Syriaca.org: The Syriac Reference Portal"/>
+        <link data-template="app:metadata"/>
         <link rel="shortcut icon" href="$nav-base/resources/images/fav-icons/mss-favicon.ico"/>
         <!-- Bootstrap 3 -->
         <link rel="stylesheet" type="text/css" href="$nav-base/resources/bootstrap/css/bootstrap.min.css"/>
@@ -11,6 +12,7 @@
         <!-- Srophe styles -->
         <link rel="stylesheet" type="text/css" href="$nav-base/resources/css/syr-icon-fonts.css"/>
         <link rel="stylesheet" type="text/css" href="$nav-base/resources/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="$nav-base/resources/css/syriaca.css"/>
         <link rel="stylesheet" type="text/css" media="print" href="$nav-base/resources/css/print.css"/>
         <!-- Leaflet -->
         <link rel="stylesheet" href="$nav-base/resources/leaflet/leaflet.css"/>
@@ -78,6 +80,19 @@
         </script>
     </head>
     <body id="body">
+        <div class="draft-info">
+            <div class="corner-ribbon top-left sticky grey shadow">DRAFT 
+                <button class="btn btn-link white-link" data-toggle="collapse" data-target="#draft-info">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"/>
+            </button>
+            </div>
+            <div id="draft-info" class="collapse grey shadow small">
+                &#160;&#160;The Wesley Works<br/>
+                development <i>Not for citation.</i><br/>
+                App Version: <span data-template="app:getAppVersion"/><br/>
+                Data Version: <span data-template="app:getDataVersion"/>
+            </div>
+        </div>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-template="app:fix-links">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -86,55 +101,24 @@
                     <span class="icon-bar"/>
                     <span class="icon-bar"/>
                 </button>
-                <a class="navbar-brand banner-container" href="$nav-base/index.html"> 
-                    <span class="syriaca-icon syriaca-syriaca banner-icon" data-template="app:logo"/>
-                    <!--<span class="banner-text" data-template="config:app-title">Wesley Works</span>-->
-                    <span class="banner-text">Wesley Works Digital Edition</span>
+                <a class="navbar-brand banner-container" href="$nav-base/index.html">
+                    <!--<span class="syriaca-icon syriaca-mss banner-icon"><span class="path1"/><span class="path2"/><span class="path3"/><span class="path4"/>
+                    </span>-->
+                    
+                    <span class="banner-text" style="font-family:'Georgia',serif"><img class="ban-logo" src="$nav-base/resources/images/jwlogo-line-small_fff.png" title="The Wesley Works Digital Edition"/>
+The Wesley Works</span>
                 </a>
             </div>
             <div class="navbar-collapse collapse pull-right" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
+
                     <li>
-                        <a href="$nav-base/index.html" class="nav-text">Home</a>
-                    </li>
+                        <a href="$nav-base/browse.html" class="nav-text">Editorial</a>
+                    </li>                    
                     <li>
                         <a href="$nav-base/browse.html" class="nav-text">Browse</a>
                     </li>
-                    <li>
-                        <a href="$nav-base/documentation/index.html" class="nav-text">Documentation </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle lonely-caret" data-toggle="dropdown"> 
-                            <span class="mobile-submenu">Publications</span>  <b class="caret"/>
-                        </a>
-                        <ul class="dropdown-menu pull-right">
-                            <li>
-                                <a href="$nav-base/index.html">
-                                    <span class="icon-text">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="$nav-base/persons/index.html">
-                                    <span class="icon-text">Persons</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="$nav-base/geo/index.html">
-                                    <span class="icon-text">Gazetteer</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="$nav-base/bibl/index.html">
-                                    <span class="icon-text">Works Cited</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="$nav-base/d3xquery/index.html">
-                                    <span class="icon-text">Relationship Visualization</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li data-template="app:shared-content" data-template-path="/templates/shared-links.html"/>
                     <li>
                         <a href="$nav-base/search.html" class="nav-text">Advanced Search</a>
                     </li>
@@ -146,7 +130,7 @@
                                     <span data-template="app:keyboard-select-menu" data-template-input-id="keywordNav"/>
                                     <button class="btn btn-default search-btn" id="searchbtn" type="submit" title="Search">
                                         <span class="glyphicon glyphicon-search"/>
-                                    </button>                                    
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -155,7 +139,7 @@
                         <div class="btn-nav">
                             <button class="btn btn-default navbar-btn" id="font" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Font">
                                 <span class="glyphicon glyphicon-font"/>
-                            </button>  
+                            </button>
                             <ul class="dropdown-menu dropdown-menu-right" id="swap-font">
                                 <li>
                                     <a href="#" class="swap-font" id="DefaultSelect" data-font-id="EstrangeloEdessa">Default</a>
@@ -180,13 +164,12 @@
             </div>
         </nav>
         <div id="content" class="text"/>
-        <footer>
-            <a class="poweredby" href="http://srophe.org">
-                <img src="$nav-base/resources/images/srophe.svg" alt="Srophe"/>
-            </a>
-        </footer>
+        <!-- Footer -->
+        <footer data-template="app:shared-content" data-template-path="/templates/footer.html"/>
     </body>
     <!-- Additional Javascript -->
     <script type="text/javascript" src="$nav-base/resources/js/jquery.validate.min.js"/>
+    <script type="text/javascript" src="$nav-base/resources/js/require.min.js"/>
     <script type="text/javascript" src="$nav-base/resources/js/srophe.js"/>
+    <script data-template="app:google-analytics"/>
 </html>
