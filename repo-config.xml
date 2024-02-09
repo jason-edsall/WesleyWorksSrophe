@@ -12,7 +12,7 @@
         <!-- Contact email -->
         <contact>info@syriaca.app</contact>
         <!-- Logo name (assumes path to logo is $app-root/resources/images/) -->
-        <logo>srophe.svg</logo>
+        <logo></logo>
         <!-- Web Site URL -->
         <url>http://syriaca.org/</url>
         <!-- Root of app for building dynamic links. Default is eXist app root  /exist/apps/srophe -->
@@ -20,7 +20,7 @@
         <!-- eXist app root for app deployment-->
         <app-root>srophe</app-root>
         <!-- eXist data app root for TEI application.  -->
-        <data-root>srophe-data</data-root>
+        <data-root>WesleyWorks-data</data-root>
         <!-- Base URI for identifiers in app data -->
         <base_uri>https://wesleyworks.ecdsdev.org</base_uri>
         <!--
