@@ -14,7 +14,7 @@
         <!-- Logo name (assumes path to logo is $app-root/resources/images/) -->
         <logo></logo>
         <!-- Web Site URL -->
-        <url>http://syriaca.org/</url>
+        <url>https://wesleyworks.ecdsdev.org</url>
         <!-- Root of app for building dynamic links. Default is eXist app root  /exist/apps/srophe -->
         <nav-base></nav-base>
         <!-- eXist app root for app deployment-->
