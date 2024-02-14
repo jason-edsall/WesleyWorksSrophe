@@ -3,7 +3,7 @@
   <description>The Srophé web application</description>
   <xmlproperty file="expath-pkg.xml" />
   <property name="project.version" value="${package(version)}" />
-  <property name="project.app" value="srophe" />
+  <property name="project.app" value="WesleyWorksSrophe" />
   <property name="build.dir" value="build" />
   <!-- Start it -->
   <target name="init" description="create build directory">
