@@ -7,7 +7,7 @@
     <license>GNU-LGPL</license>
     <copyright>true</copyright>
     <type>application</type>
-    <target>WesleyWorksSrophe</target>
+    <target>WesleyWorks</target>
     <prepare>pre-install.xql</prepare>
     <finish>post-install.xql</finish>
 </meta>
