@@ -67,7 +67,7 @@
                 data-root="folder name in data"/>-->
 
             <collection name="places" title="The Syriac Gazetteer" app-root="/geo/" data-root="places" record-URI-pattern="http://syriaca.org/place/"/>
-            <collection name="persons" title="SBD" app-root="/" data-root="persons" record-URI-pattern="https://wesleyworks.ecdsdev.org/person/"/>
+            <collection name="persons" title="Persons" app-root="/" data-root="persons" record-URI-pattern="https://wesleyworks.ecdsdev.org/persons/"/>
             <collection name="works" title="NHSL" app-root="/" data-root="works" record-URI-pattern="http://syriaca.org/work/"/>
             <collection name="bibl" title="Works Cited" app-root="/bibl/" data-root="bibl" record-URI-pattern="http://syriaca.org/bibl/"/>
         </collections>
