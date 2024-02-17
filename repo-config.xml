@@ -12,7 +12,7 @@
         <!-- Contact email -->
         <contact>info@syriaca.app</contact>
         <!-- Logo name (assumes path to logo is $app-root/resources/images/) -->
-        <logo></logo>
+        <logo>jwlogo-line-small_fff.png</logo>
         <!-- Web Site URL -->
         <url>https://wesleyworks.ecdsdev.org</url>
         <!-- Root of app for building dynamic links. Default is eXist app root  /exist/apps/srophe -->
