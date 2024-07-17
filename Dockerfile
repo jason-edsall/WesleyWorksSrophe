@@ -3,7 +3,7 @@ FROM --platform=linux/amd64 pkoiralap/existdb:1.0.0
 ARG ADMIN_PASSWORD
 
 COPY autodeploy/*.xar /exist/autodeploy/
-
+COPY conf/controller-config.xml /exist/etc/webapp/WEB-INF/
 COPY conf/collection.xconf.init /exist/etc/
 COPY conf/exist-webapp-context.xml /exist/etc/jetty/webapps/
 COPY conf/conf.xml /exist/etc/conf.xml
