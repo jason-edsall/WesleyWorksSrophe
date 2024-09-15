@@ -1,26 +1,80 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" data-template="templates:surround" data-template-with="templates/persons.html" data-template-at="content">
-    <div class="container top-padding">
-    <h1 class="banner">Browse Persons </h1>
-    <div class="main-content-block">
-        <div data-template="browse:get-all" data-template-collection="persons">
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="main-content">
+           <h3 class="banner">Browse</h3>
+        <div class="browse-top-box">
+            <p class="b-badges">Listings of all Persons</p>
+            <input type="text" class="bfilter" id="myInput" placeholder="Quick filter..."/>
+        </div>
+        <div data-template="browse:get-all" data-template-element="tei:titleStmt/tei:title[@level='a']">
+        <!-- Example limits data to places collection, see example entry in repo-config.xml -->    
+<!--        <div data-template="browse:get-all" data-template-collection="places">-->
             <div class="tabbable"> 
-                <ul class="nav nav-tabs" id="nametabs">
+                <!-- Browse Tabs Configurable. -->
+                  <ul class="nav nav-tabs" id="nametabs">
+                <li/>
                     <li>
-                        <a href="browse.html" default="default">All</a>
+                        <a href="browse.html">All Items</a>
                     </li>
+                    <!--<li>
+                        <a href="../volumes/browse.html?lang=en&amp;alpha-filter-value=A&amp;collection=volumes">Volumes</a>
+                    </li>-->
+                    <li>
+                        <a href="../sermons/browse.html?lang=en&amp;alpha-filter-value=A&amp;collection=sermons">Sermons</a>
+                    </li>
+                    <li>
+                        <a href="../letters/browse.html?lang=en&amp;alpha-filter-value=A&amp;collection=letters">Letters</a>
+                    </li>
+                    <li class="active">
+                        <!--<a href="browse.html?lang=en&amp;alpha-filter-value=A&amp;element=tei:place/tei:placeName">Places</a>-->
+                        <a href="../persons/browse.html?lang=en&amp;alpha-filter-value=A&amp;collection=persons">Persons</a>
+                    </li>
+                    <li>
+                        <a href="../keyterms/browse.html?lang=en&amp;alpha-filter-value=A&amp;collection=keyterms">Key Terms</a>
+                    </li>
+                   <!-- <li>
+                        <a href="browse.html?lang=en&amp;alpha-filter-value=A&amp;element=tei:persons/tei:persName">Persons</a>
+                    </li>-->
+                    <!--<li>
+                        <a href="browse.html?view=map">Map</a>
+                    </li>
+                    <li>
+                        <a href="browse.html?lang=en&amp;alpha-filter-value=A&amp;element=tei:letters/tei:biblScope">Volume</a>
+                    </li>-->
                 </ul>
+                <!-- Browse Content -->
                 <div class="tab-content">
                     <div class="tab-pane active">
                         <div class="row">
-                            <div data-template="browse:show-hits" data-template-collection="persons"/>
+                            <div data-template="browse:show-hits"/>
                         </div>
-                        <div data-template="app:pageination" data-template-collection="persons"/>
+                        <!--<div data-template="app:pageination"/>-->
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
-    </div>
+    <script>
+        $(document).ready(function() {
+          $('.bfilter').on('input', function() {
+            var $this = $(this);
+            var $cards = $('.result');
+
+            $filteredCards = $cards.each(function(i, card) {
+              var $card = $(card);
+              var name = $card.find('.tei-title').first();
+              name = name.text().toLowerCase();
+
+              if(name.indexOf($this.val().toLowerCase()) !== -1) {
+                $card.show();
+              } else {
+                $card.hide();
+              }
+                 $(".result:contains('reviewer')").hide();
+            });
+          });
+        });
+$(document).ready(function() {
+    $(".result:contains('reviewer1'), .result:contains('reviewer2'), .result:contains('reviewer3')").hide();
+});
+    </script>    
 </div>
